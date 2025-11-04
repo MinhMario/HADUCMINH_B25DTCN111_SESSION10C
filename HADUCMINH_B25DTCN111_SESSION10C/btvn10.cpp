@@ -12,7 +12,7 @@ int main(){
 		printf("%d ",arr[i]);
 	}
 	for(int i=0;i<size;i++){
-		if(arr[i]=key){
+		if(arr[i]==key){
 			flag=1;
 			break;
 		}
@@ -20,18 +20,18 @@ int main(){
 	if(flag==1){
 		printf("Tim thay phan tu %d trong mang \n",key);
 	}else{
-		printf("Khong tim thay phan tu trong mang");
+		printf("Khong tim thay phan tu trong mang\n");
 	}
 	for(int i=0;i<size;i++){
 		for(int j=i+1;j<size;j++){
 			if(arr[j]<arr[i]){
 				int tmp=arr[i];
-				arr[j]=arr[i];
-				tmp=arr[j];
+				arr[i]=arr[j];
+				arr[j]=tmp;
 			}
 		}
 	}
-	printf("Mang sau khi sap xep la: ");
+	printf("Mang sau khi sap xep la: \n");
 	for(int i=0;i<size;i++){
 		printf("%d ",arr[i]);
 	}
@@ -40,8 +40,8 @@ int main(){
 	int right=size-1;
 	while(left<=right){
 		mid=(left+right)/2;
-		if(arr[mid]=key){
-			printf("Tim thay phan tu key");
+		if(arr[mid]==key){
+			printf("Tim thay phan tu key \n");
 			flag=1;
 			break;
 		}else if(arr[mid]<key){
